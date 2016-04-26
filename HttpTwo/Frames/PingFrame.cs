@@ -19,15 +19,15 @@ namespace HttpTwo
             get { return 0x0; }
         }
 
-        byte[] opaqueData = new byte[64];
+        byte[] opaqueData = new byte[8];
 
         public byte[] OpaqueData { 
             get { 
                 return opaqueData;
             }
             set {
-                if (opaqueData.Length != 64)
-                    throw new ArgumentOutOfRangeException ("value", "Must be 64 bytes of data");
+                if (opaqueData.Length != 8)
+                    throw new ArgumentOutOfRangeException ("value", "Must be 8 octets/bytes (64 bits) of data");
 
                 opaqueData = value;
             }
